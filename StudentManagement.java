@@ -61,7 +61,7 @@ class Student implements StudentInterface {
             if (f.exists()) {
                 System.out.println("File Existed");
                 Records r = new Records();
-                fw.append(r.Name + "\n" + r.FName + "\n" + r.ClassName + "\n" + r.MName + "\n" + r.DOB + "\n" + r.Age + "\n" + r.PhoneNo + "\n" + r.Address + "\n");
+                fw.append("\n" + r.Name + "\n" + r.ClassName + "\n" + r.FName + "\n" + r.MName + "\n" + r.DOB + "\n" + r.Age + "\n" + r.PhoneNo + "\n" + r.Address + "\n");
                 fw.close();
             } else {
                 System.err.println("File Error");
@@ -90,9 +90,11 @@ class Student implements StudentInterface {
             if (br.readLine() == null) {
                 System.out.println("File is Empty");
             }
+            System.out.println("\n**************************");
             while ((s = br.readLine()) != null) {
                 System.out.println(s);
             }
+            System.out.println("**************************\n");
         } catch (Exception e) {
             System.out.println("File Error");
         } finally {
